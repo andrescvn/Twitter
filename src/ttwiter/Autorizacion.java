@@ -112,16 +112,4 @@ public class Autorizacion {
         System.out.println("Sent: " + message.getText() + " to @" + message.getRecipientScreenName());
 
     }
-    /**
-     * get a status list
-     */
-    public static void seleccion(){
-      while(it.hasNext()){  
-      }
-    for(int i=0;i<twits.size();i++){
-  System.out.println(twits.get(i).getUser()+""+twits.get(i).getGeoLocation()+""+twits.get(i).getText());
-        
-    }
-       
-    }
 }

@@ -8,7 +8,8 @@ package ttwiter;
 import javax.swing.JOptionPane;
 
 /**
- *menu
+ * menu
+ *
  * @author acomesanavila
  */
 public class TTwiter {
@@ -23,7 +24,7 @@ public class TTwiter {
         int select;
 
         do {
-            select = Integer.parseInt(JOptionPane.showInputDialog("1. Nuevo estado \n 2.TimeLine \n 3.BuscarTwit \n 4.Mensaje \n 5.Seleccionar twits"));
+            select = Integer.parseInt(JOptionPane.showInputDialog("1. Nuevo estado \n 2.TimeLine \n 3.BuscarTwit \n 4.Mensaje"));
             switch (select) {
 
                 case 1:
@@ -38,11 +39,10 @@ public class TTwiter {
                 case 4:
                     Autorizacion.enviarMensaje(JOptionPane.showInputDialog("Introduce destinatario"), JOptionPane.showInputDialog("Introduce el mensaje"));
                     break;
-                case 5:
-                    Autorizacion.seleccion();
-                    break;
+
             }
 
         } while (select != 0);
+
     }
 }
