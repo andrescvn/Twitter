@@ -8,7 +8,7 @@ package ttwiter;
 import javax.swing.JOptionPane;
 
 /**
- *
+ *menu
  * @author acomesanavila
  */
 public class TTwiter {

@@ -96,7 +96,6 @@ public class Autorizacion {
 
     /**
      * send a md
-     * 
      *
      * @param destinatario profile that will recive the md
      * 
@@ -117,9 +116,7 @@ public class Autorizacion {
      * get a status list
      */
     public static void seleccion(){
-      while(it.hasNext()){
-          
-        
+      while(it.hasNext()){  
       }
     for(int i=0;i<twits.size();i++){
   System.out.println(twits.get(i).getUser()+""+twits.get(i).getGeoLocation()+""+twits.get(i).getText());
