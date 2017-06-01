@@ -1,18 +1,13 @@
 package ttwiter;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.logging.Level;
-import javax.swing.JOptionPane;
 import twitter4j.Status;
 import twitter4j.Twitter;
 import twitter4j.TwitterFactory;
 import twitter4j.*;
-import twitter4j.auth.AccessToken;
-import twitter4j.auth.RequestToken;
 import twitter4j.conf.ConfigurationBuilder;
 
 public class Autorizacion {
@@ -21,8 +16,10 @@ public class Autorizacion {
     static Twitter twitter;
     static Status status;
     static DirectMessage message;
+     ResponseList <twitter4j.Status> statuses;
     static ArrayList <Status> twits = new ArrayList<Status>();
     static Iterator <Status>it = twits.iterator();
+
     /**
      * Permission to use twiter
      */
@@ -31,13 +28,7 @@ public class Autorizacion {
     }
     
     public static void conexion(){
-        
         cb = new ConfigurationBuilder();
-        cb.setDebugEnabled(true);
-        cb.setOAuthConsumerKey("o3jgg5Hn4yTLGCY6snhMVi0dq");
-        cb.setOAuthConsumerSecret("YOq2miI66A5B3sWym1YhLtx4hhF1h5ielvSpgL0OqRDdUpB2uj");
-        cb.setOAuthAccessToken("1678793768-UrxhKjGexngzxns58ZrZC2nwJYLibnlAiWssWC4");
-        cb.setOAuthAccessTokenSecret("y7B0sMexOmeb86MnGTzhwnwOiSejn46QscuUVj7FbbNcX");
         TwitterFactory tf = new TwitterFactory(cb.build());
         twitter = tf.getInstance();
     }
